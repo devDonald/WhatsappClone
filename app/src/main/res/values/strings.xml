@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Whatsapp Clone</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="tab_text_1">Chats</string>
+    <string name="tab_text_2">Status</string>
+    <string name="tab_text_3">Calls</string>
+
     <string name="search">Search</string>
 </resources>

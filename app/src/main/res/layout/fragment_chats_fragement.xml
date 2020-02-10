@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.fragments.ChatsFragement">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+                <ImageView
+                    android:id="@+id/img_chats"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/image_background"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:id="@+id/tv_person_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deejay"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toRightOf="@id/img_chats"
+                    app:layout_constraintTop_toTopOf="@id/img_chats"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_chat_latest"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_chat_latest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="how far na?"
+                    app:layout_constraintLeft_toRightOf="@id/img_chats"
+                    app:layout_constraintTop_toBottomOf="@id/tv_person_name"
+                    app:layout_constraintBottom_toBottomOf="@id/img_chats"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:id="@+id/tv_chat_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11.59 AM"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/img_chats"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp"
+                    android:textColor="#0AB411"/>
+                <TextView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:text="200"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/img_chats"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/chat_counts"
+                    android:gravity="center"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="#0AB411"
+        app:srcCompat="@drawable/ic_chat" />
+
+</FrameLayout>
