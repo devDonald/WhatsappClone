@@ -23,6 +23,10 @@ class Profile : AppCompatActivity() {
     private val CAMERA = 21
     internal var output: File? = null
 
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class Profile : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -132,5 +136,16 @@ class Profile : AppCompatActivity() {
         }
 
 
+    }
+}
+        val actionBar = supportActionBar
+        actionBar!!.title = "Profile"
+        actionBar.setDefaultDisplayHomeAsUpEnabled(true)
+        actionBar.setDefaultDisplayHomeAsUpEnabled(true)
+
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
